@@ -1,6 +1,6 @@
 # IYF Season 10 - Week 6
 
-## 📋 Week 6 Tasks
+## 📋 Week 6 Tasks - Async JavaScript & Fetch API
 
 ### 🔄 **TASK 11 - Async JavaScript**
 - **11.1** - Understanding Async (Synchronous vs Asynchronous)
@@ -14,10 +14,13 @@
 - **12.3** - POST Requests (sending data)
 - **12.4** - Search & Filter (dynamic filtering)
 
-## 📁 Files Structure
+## 📁 File Structure
 
 ```
 iyf-s10-week-06-peterfficials/
+├── index.html          # Main landing page with task navigation
+├── main.js             # Main page JavaScript functionality
+├── styles.css          # Styling for main page
 ├── async.html          # Task 11 HTML interface
 ├── async.js            # Task 11 JavaScript exercises
 ├── api.html            # Task 12 HTML interface  
@@ -27,10 +30,15 @@ iyf-s10-week-06-peterfficials/
 
 ## 🚀 How to Use
 
+### **Main Page (index.html)**
+1. Open `index.html` in your browser
+2. Navigate between tasks using the interactive interface
+3. Click on task buttons to open specific exercises
+
 ### **Async JavaScript Tasks (TASK 11)**
 1. Open `async.html` in your browser
-2. Open browser console (F12)
-3. See async concepts in action with practical examples
+2. Open browser console (F12) to see async operations
+3. Follow the console output to understand execution flow
 
 ### **Fetch API Tasks (TASK 12)**
 1. Open `api.html` in your browser
@@ -51,9 +59,9 @@ iyf-s10-week-06-peterfficials/
 
 ## 🛠 Technologies Used
 
-- **HTML5** - Semantic structure
-- **CSS3** - Modern styling
-- **JavaScript ES6+** - Async patterns, Fetch API
+- **HTML5** - Semantic structure and navigation
+- **CSS3** - Modern styling with gradients and animations
+- **JavaScript ES6+** - Async patterns, Fetch API, DOM manipulation
 - **JSONPlaceholder API** - Free fake API for testing
 
 ## 📝 Notes
@@ -62,6 +70,11 @@ iyf-s10-week-06-peterfficials/
 - Console logging shows execution flow
 - Error handling implemented throughout
 - Progressive difficulty from basic to advanced
+- Interactive main page for easy navigation
+
+## 🌐 Live Demo
+
+Open `index.html` in your browser to see the interactive task interface!
 
 ---
 
