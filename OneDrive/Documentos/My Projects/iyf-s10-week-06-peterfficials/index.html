@@ -3,99 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>IYF Season 10 - Week 6</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Weather App</h1>
-            <p>Get current weather and 5-day forecast for any city</p>
+            <h1>IYF Season 10 - Week 6</h1>
+            <p>Complete Collection: Weather App + JavaScript Exercises</p>
         </header>
 
         <main>
-            <div class="search-container">
-                <div class="search-input-wrapper">
-                    <input type="text" id="cityInput" placeholder="Enter city name, ward, or area..." />
-                    <select id="recentCities" class="recent-cities-dropdown" aria-label="Recent city searches" title="Select from recent city searches">
-                        <option value="">Recent searches...</option>
-                    </select>
+            <section class="project-section">
+                <h2>🌤️ Weather App</h2>
+                <p>Advanced weather application with geocoding, GPS location, and modern UI</p>
+                <div class="features">
+                    <span class="feature-tag">Local Ward Search</span>
+                    <span class="feature-tag">GPS Detection</span>
+                    <span class="feature-tag">Recent Cities</span>
+                    <span class="feature-tag">Location Suggestions</span>
                 </div>
-                <div class="search-buttons">
-                    <button id="searchBtn">Search</button>
-                    <button id="locationBtn" class="location-btn">📍 My Location</button>
+                <a href="weather-app.html" class="project-btn">Open Weather App</a>
+            </section>
+
+            <section class="project-section">
+                <h2>🔄 Async JavaScript (Task 11)</h2>
+                <p>Master asynchronous programming with callbacks, promises, and async/await</p>
+                <div class="features">
+                    <span class="feature-tag">Callbacks</span>
+                    <span class="feature-tag">Promises</span>
+                    <span class="feature-tag">Async/Await</span>
+                    <span class="feature-tag">Promise.all/race</span>
                 </div>
-                <div id="locationSuggestions" class="location-suggestions hidden"></div>
-            </div>
+                <a href="async.html" class="project-btn">Open Async Exercises</a>
+            </section>
 
-            <div id="loading" class="loading hidden">
-                <div class="spinner"></div>
-                <p>Loading weather data...</p>
-            </div>
-
-            <div id="error" class="error hidden">
-                <p id="errorMessage"></p>
-                <button id="retryBtn" class="retry-btn">Retry</button>
-            </div>
-
-            <div id="weatherInfo" class="weather-info hidden">
-                <div class="view-toggle">
-                    <button id="currentBtn" class="toggle-btn active">Current Weather</button>
-                    <button id="forecastBtn" class="toggle-btn">5-Day Forecast</button>
+            <section class="project-section">
+                <h2>🌐 Fetch API (Task 12)</h2>
+                <p>Practice API calls, data fetching, POST requests, and dynamic filtering</p>
+                <div class="features">
+                    <span class="feature-tag">GET Requests</span>
+                    <span class="feature-tag">POST Requests</span>
+                    <span class="feature-tag">Data Display</span>
+                    <span class="feature-tag">Search & Filter</span>
                 </div>
+                <a href="api.html" class="project-btn">Open API Exercises</a>
+            </section>
 
-                <div id="currentView" class="weather-view">
-                    <div class="weather-header">
-                        <h2 id="cityName"></h2>
-                        <p id="country"></p>
-                        <p id="dateTime"></p>
+            <section class="info-section">
+                <h3>📋 How to Use</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>Weather App</h4>
+                        <p>Search for any city, use GPS location, or search local areas like "mwiki"</p>
                     </div>
-
-                    <div class="weather-main">
-                        <div class="temperature-section">
-                            <span id="temperature"></span>
-                            <span id="feelsLike"></span>
-                        </div>
-                        <div class="weather-icon-section">
-                            <img id="weatherIcon" src="" alt="Weather icon" />
-                            <p id="weatherDescription"></p>
-                        </div>
+                    <div class="info-item">
+                        <h4>Async Exercises</h4>
+                        <p>Open browser console (F12) to see async operations in action</p>
                     </div>
-
-                    <div class="weather-details">
-                        <div class="detail-card">
-                            <h3>Humidity</h3>
-                            <p id="humidity"></p>
-                        </div>
-                        <div class="detail-card">
-                            <h3>Wind Speed</h3>
-                            <p id="windSpeed"></p>
-                        </div>
-                        <div class="detail-card">
-                            <h3>Pressure</h3>
-                            <p id="pressure"></p>
-                        </div>
-                        <div class="detail-card">
-                            <h3>Visibility</h3>
-                            <p id="visibility"></p>
-                        </div>
+                    <div class="info-item">
+                        <h4>API Exercises</h4>
+                        <p>Fetch user data, practice POST requests, and implement search/filter</p>
                     </div>
                 </div>
-
-                <div id="forecastView" class="weather-view hidden">
-                    <div class="forecast-header">
-                        <h2 id="forecastCityName"></h2>
-                        <p id="forecastCountry"></p>
-                        <p id="forecastDateTime"></p>
-                    </div>
-                    <div id="forecastContainer" class="forecast-container">
-                        <!-- Forecast cards will be inserted here -->
-                    </div>
-                </div>
-            </div>
+            </section>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

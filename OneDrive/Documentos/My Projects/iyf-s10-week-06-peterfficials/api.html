@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API - Task 12</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .controls > * {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background: #5a67d8;
+        }
+        
+        #users-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .user-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .user-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .user-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .user-card p {
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .user-card .email {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        #loading, #error {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            color: white;
+        }
+        
+        #loading {
+            background: rgba(102, 126, 234, 0.9);
+            border-radius: 10px;
+        }
+        
+        #error {
+            background: rgba(239, 68, 68, 0.9);
+            border-radius: 10px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .task-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .task-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌐 Task 12 - Fetch API Exercises</h1>
+            <p>Practice API calls, data fetching, and dynamic filtering</p>
+        </header>
+
+        <div class="task-section">
+            <h2>12.1 - Fetch API Basics</h2>
+            <p>Click the button below to fetch user data from JSONPlaceholder API</p>
+        </div>
+
+        <div class="controls">
+            <button id="fetchUsers">Fetch Users</button>
+            <input type="text" id="search" placeholder="Search users by name...">
+            <select id="sort">
+                <option value="">Sort by...</option>
+                <option value="name">Name</option>
+                <option value="username">Username</option>
+                <option value="email">Email</option>
+            </select>
+        </div>
+
+        <div id="loading" class="hidden">Loading users...</div>
+        <div id="error" class="hidden"></div>
+        
+        <div id="users-container"></div>
+
+        <div class="task-section">
+            <h2>12.2 - Display API Data</h2>
+            <p>User cards are displayed above with fetched data</p>
+        </div>
+
+        <div class="task-section">
+            <h2>12.3 - POST Requests</h2>
+            <p>Check console to see POST request examples</p>
+        </div>
+
+        <div class="task-section">
+            <h2>12.4 - Search & Filter</h2>
+            <p>Use the search and sort controls above to filter users</p>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+</body>
+</html>
